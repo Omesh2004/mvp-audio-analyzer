@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Play, Pause, Upload, FileAudio, Image, X, Info, Music, Download } from "lucide-react"
+import { Play, Pause, Upload, FileAudio, Image, Info, Music, Download } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { toast } from "sonner"
@@ -28,8 +28,8 @@ export default function Index() {
   const [selectedImage, setSelectedImage] = useState<{url: string, title: string} | null>(null)
   const [detailedAnalysis, setDetailedAnalysis] = useState<{
     genre: string,
-    instrument: any,
-    key_tempo: any
+    instrument: string,
+    key_tempo: number
   } | null>(null)
   
   const audioRef = useRef<HTMLAudioElement>(null)
